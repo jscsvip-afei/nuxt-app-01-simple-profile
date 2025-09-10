@@ -6,8 +6,8 @@ export const useUser = () => {
   const { apiBaseUrl } = useRuntimeConfig().public
 
   // State
-  const userInfo = ref<UserItem | null>(null)
-  const isLoading = ref(false)
+  const userInfo = useState<UserItem | null>('userInfo', () => null)
+  const isLoading = useState<boolean>('isUserLoading', () => false)
 
   // Fetches user information from the API
   const fetchUserInfo = async () => {

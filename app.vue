@@ -20,6 +20,9 @@
 
 <script setup>
 const img = useImage()
+const { fetchUserInfo } = useUser()
+const { fetchPhotoList } = usePhotos()
+
 useSeoMeta({
   title: 'Hato | Minimal Portfolio Showcase',
   ogTitle: 'Hato | Minimal Portfolio Showcase',
@@ -49,5 +52,10 @@ useHead({
       href: '/favicon.svg'
     }
   ]
+})
+
+onMounted(() => {
+  fetchUserInfo()
+  fetchPhotoList()
 })
 </script>

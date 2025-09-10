@@ -24,12 +24,7 @@
 
 <script setup>
 // 使用usePhotos获取图片数据
-const { displayImages, isLoading, fetchPhotoList } = usePhotos()
-
-// 组件挂载时获取图片
-onMounted(() => {
-  fetchPhotoList()
-})
+const { displayImages, isLoading } = usePhotos()
 </script>
 
 <style scoped>

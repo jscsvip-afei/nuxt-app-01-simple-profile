@@ -2,8 +2,8 @@ import { photoApi } from '~/api/photo'
 
 // 图片相关的API接口
 export const usePhotos = () => {
-  const displayImages = ref<{ id: number; src: string }[]>([])
-  const isLoading = ref(true)
+  const displayImages = useState<{ id: number; src: string }[]>('photos', () => [])
+  const isLoading = useState<boolean>('isPhotosLoading', () => true)
   
   // 获取环境配置和API方法
   const config = useRuntimeConfig()

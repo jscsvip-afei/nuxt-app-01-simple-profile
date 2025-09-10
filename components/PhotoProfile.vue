@@ -3,9 +3,5 @@
 </template>
 
 <script setup>
-const { userInfo, fetchUserInfo } = useUser()
-
-onMounted(() => {
-  fetchUserInfo()
-})
+const { userInfo } = useUser()
 </script>
