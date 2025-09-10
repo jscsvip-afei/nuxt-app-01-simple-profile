@@ -1,8 +1,11 @@
 <template>
-    <UAvatar :src="photo" size="3xl" alt="my-profile-photo" height="200" />
+    <UAvatar :src="userInfo?.photo" size="3xl" alt="my-profile-photo" />
 </template>
 
 <script setup>
-const app = useAppConfig();
-const { data: { photo } } = app
+const { userInfo, fetchUserInfo } = useUser()
+
+onMounted(() => {
+  fetchUserInfo()
+})
 </script>

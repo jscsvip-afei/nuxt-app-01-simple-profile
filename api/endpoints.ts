@@ -10,10 +10,14 @@ export const apiEndpoints = {
      * 获取图片列表
      */
     list: '/api/profile.Photo/index',
-  
   },
-  
   /**
-   * 其他API...
+   * 用户相关API
    */
+  user: {
+    /**
+     * 获取用户信息
+     */
+    info: '/api/profile.User/index',
+  },
 }

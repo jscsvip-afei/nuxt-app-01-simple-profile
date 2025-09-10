@@ -42,3 +42,26 @@ export interface ApiResponse<T = any> {
   time: number
   data: T
 }
+
+export interface UserItem {
+  id: number
+  name: string
+  photo: string
+  title: string
+  bio: string
+  website: string
+  phone: string
+  email: string
+  github: string
+  x: string
+  facebook: string
+  instagram: string
+  tiktok: string
+}
+
+export interface UserResponse {
+  time: number
+  data: {
+    list: UserItem[]
+  }
+}
