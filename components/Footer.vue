@@ -1,18 +1,18 @@
 <template>
     <UContainer>
-        <footer class="flex items-center justify-evenly py-12 relative z-20">
-            <NuxtLink :to="`mailto:${email}`"
+        <footer class="flex items-center justify-center gap-x-8 py-12 relative z-20">
+            <span
                 class="text-sm text-zinc-700 hover:text-zinc-950 dark:text-zinc-50/80 hover:dark:text-zinc-50">
-                {{ email }}
-            </NuxtLink>
-            <NuxtLink to="https://github.com/cesswhite/hato-minimal-template" target="_blank"
+                {{ footer.name }}
+            </span>
+            <span 
                 class="text-sm text-zinc-700 hover:text-zinc-950 dark:text-zinc-50/80 hover:dark:text-zinc-50">
-                Download Hato | Free Template
-            </NuxtLink>
-            <NuxtLink :to="`tel:${phone}`"
+                {{footer.time}}
+            </span>
+            <span
                 class="text-sm text-zinc-700 hover:text-zinc-950 dark:text-zinc-50/80 hover:dark:text-zinc-50">
-                {{ phone }}
-            </NuxtLink>
+                {{ footer.logo }}
+            </span>
         </footer>
     </UContainer>
 </template>
@@ -20,5 +20,5 @@
 
 <script setup>
 const app = useAppConfig();
-const { data: { email, phone } } = app
+const { data: { footer } } = app
 </script>

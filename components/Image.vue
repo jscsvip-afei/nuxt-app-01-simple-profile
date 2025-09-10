@@ -1,8 +1,8 @@
 <template>
     <NuxtImg :src="props.src"
         :placeholder="img(props.src, { h: 20, w: 20, blur: 16, q: 90 })" fit="cover"
-        class="size-60 object-center object-cover cursor-pointer transform-gpu transition-all ease-in-out duration-150 will-change-transform group-hover:scale-102 group-hover:group-odd:rotate-2 group-hover:group-even:-rotate-2" alt="
-        image-work" @click="showPreviewModal = true" loading="lazy" />
+        class="size-60 object-center object-cover cursor-pointer transform-gpu transition-all ease-in-out duration-150 will-change-transform group-hover:scale-102 group-hover:group-odd:rotate-2 group-hover:group-even:-rotate-2"
+        :alt="props.alt" @click="showPreviewModal = true" loading="lazy" />
     <UModal v-model="showPreviewModal" fullscreen>
         <div class="p-4 h-dvh relative">
             <div class="absolute top-4 right-4 z-10">
@@ -11,7 +11,7 @@
             </div>
             <NuxtImg :src="props.src"
                 :placeholder="img(props.src, { h: 20, w: 20, blur: 16, q: 90 })" fit="cover"
-                class="size-full object-center object-cover" loading="lazy" />
+                class="size-full object-center object-cover" loading="lazy" :alt="props.alt" />
         </div>
     </UModal>
 </template>
@@ -22,5 +22,6 @@ const img = useImage()
 
 const props = defineProps<{
     src: string
+    alt: string
 }>()
 </script>

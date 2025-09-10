@@ -1,6 +1,6 @@
 <template>
-  <div class="w-full relative h-full pt-12 bg-zinc-50 dark:bg-zinc-950">
-    <div class="relative z-20">
+  <div class="w-full relative flex flex-col min-h-screen pt-12 bg-zinc-50 dark:bg-zinc-950">
+    <div class="relative z-20 flex-grow">
       <LazySwitchMode />
       <UContainer>
         <div v-motion-fade class="flex flex-col gap-2 items-center justify-center">
