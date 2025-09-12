@@ -3,9 +3,11 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build",
+    "build": "cross-env NODE_ENV=production VITE_API_BASE_URL=https://jscs.vip nuxt build",
+    "build:dev": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate",
+    "generate": "cross-env NODE_ENV=production VITE_API_BASE_URL=https://jscs.vip nuxt generate",
+    "generate:dev": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
@@ -13,6 +15,7 @@
     "@nuxt/devtools": "latest",
     "@nuxt/image": "^1.5.0",
     "@nuxt/ui": "^2.13.0",
+    "cross-env": "^10.0.0",
     "nuxt": "^3.10.1"
   },
   "dependencies": {
