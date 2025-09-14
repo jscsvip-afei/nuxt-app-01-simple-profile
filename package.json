@@ -3,22 +3,22 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "cross-env NODE_ENV=production VITE_API_BASE_URL=https://jscs.vip nuxt build",
+    "build": "nuxt build --dotenv .env --log-level silent",
     "build:dev": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "cross-env NODE_ENV=production VITE_API_BASE_URL=https://jscs.vip nuxt generate",
+    "generate": "nuxt generate --dotenv .env --log-level silent",
     "generate:dev": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxt/devtools": "latest",
-    "@nuxt/image": "^1.5.0",
-    "@nuxt/ui": "^2.13.0",
-    "cross-env": "^10.0.0",
-    "nuxt": "^3.10.1"
+    "@nuxt/devtools": "1.1.5",
+    "@nuxt/image": "1.5.0",
+    "@nuxt/ui": "2.13.0",
+    "cross-env": "10.0.0",
+    "nuxt": "3.10.1"
   },
   "dependencies": {
-    "@vueuse/motion": "^2.1.0"
+    "@vueuse/motion": "2.1.0"
   }
 }
