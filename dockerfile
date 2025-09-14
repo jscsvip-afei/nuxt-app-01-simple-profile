@@ -5,11 +5,10 @@ FROM node:22.12.0 AS builder
 WORKDIR /app
 
 # 首先复制包管理文件以利用 Docker 缓存层
-COPY package.json pnpm-lock.yaml* ./
+COPY package.json package-lock.json* ./
 
 # 安装依赖（包括 devDependencies，因为需要构建）
-RUN npm install -g pnpm
-RUN pnpm install
+RUN npm install
 # 复制项目文件
 COPY . .
 
@@ -34,3 +33,4 @@ EXPOSE 3000
 
 # 启动命令
 CMD ["node", "/app/server/index.mjs"]
+
