@@ -14,7 +14,7 @@ RUN pnpm install
 COPY . .
 
 # 构建应用
-RUN pnpm run build
+RUN npm run build
 
 # 使用更小的基础镜像来运行应用
 FROM node:22.12.0 AS runner
