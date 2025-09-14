@@ -10,8 +10,8 @@ export default defineNuxtConfig({
   // 运行时配置，将环境变量暴露给客户端
   runtimeConfig: {
     public: {
-      env: process.env.VITE_ENV,
-      apiBaseUrl: process.env.VITE_API_BASE_URL || 'http://127.0.0.1:8000'
+      env: process.env.NUXT_PUBLIC_VITE_ENV,
+      apiBaseUrl: process.env.NUXT_PUBLIC_API_BASE_URL || 'http://127.0.0.1:8000'
     }
   },
   
