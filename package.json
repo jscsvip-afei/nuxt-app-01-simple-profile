@@ -3,10 +3,10 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "build": "nuxt build --dotenv .env.production --log-level silent",
+    "build": "nuxt build --dotenv .env --log-level silent",
     "build:dev": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate --dotenv .env.production --log-level silent",
+    "generate": "nuxt generate --dotenv .env --log-level silent",
     "generate:dev": "nuxt generate",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare"
